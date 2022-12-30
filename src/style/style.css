@@ -1,0 +1,47 @@
+:root {
+    --purple :rgb(100,100,100)
+}
+body{
+    margin:0;
+    padding:0;
+    color: var(--purple);
+    font-family:sans-serif;  
+    background-color: rgb(212, 245, 245); 
+}
+*{
+    box-sizing: border-box;
+
+}
+h1{
+    font-size: 40px;
+    text-transform: uppercase;
+}
+.container{
+     padding:20px;
+     height:100vh;
+     display:flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column ;
+}
+button{
+    border-radius: 25%;
+    font-size: 20px;
+    background-color: var(--purple);
+    color:white
+}
+
+#gameboard{
+    width:450px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.box{
+    height: 150px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: brown;
+}
