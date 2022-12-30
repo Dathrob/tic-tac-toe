@@ -1,10 +1,11 @@
 const boxes = Array.from(document.getElementsByClassName("box")) 
 const firstplayer = 'X';
 const secondplayer = '0';
-const places = [null,null,null,null,null,null,null,null,null];
+const places = [];
 const outbox = document.getElementById("outbox")
 let currentplayer = firstplayer;
 let gamefinished = false
+const restartbutton = document.getElementById("restart")
 const draw = () =>{
     boxes.forEach((box,index) =>{
         let styleString = '';
@@ -23,6 +24,7 @@ const draw = () =>{
         box.style = styleString;
         box.addEventListener('click',boxclicked);
     })
+    
 } 
 const boxclicked = (e) =>{
     const id = e.target.id;
@@ -32,13 +34,14 @@ const boxclicked = (e) =>{
          places[id] = currentplayer;
         if(haswon()){
             outbox.innerText = `${currentplayer } has won`
-            outbox.style = "color:green;"
+            outbox.style = "color:green;font-size = 60px;"
             gamefinished = true
         }
+        currentplayer = currentplayer === firstplayer ? secondplayer : firstplayer;
         
     }
 }
-    currentplayer = currentplayer === firstplayer ? secondplayer : firstplayer;
+    
     
     
 }
@@ -71,4 +74,17 @@ const haswon = () => {
         return true
     }
 }
+restartbutton.addEventListener('click',restart = () => {
+    gamefinished = false
+    currentplayer =  firstplayer
+    places.forEach((place,index)=>{
+        places[index] = null;
+    })
+    boxes.forEach((box) => {
+        box.innerHTML = '';
+        outbox.innerText = "TIC TAC TOE";
+        outbox.style='color:white;'
+    } )
+});
+
 draw();

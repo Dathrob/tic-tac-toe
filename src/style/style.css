@@ -1,12 +1,12 @@
 :root {
-    --purple :rgb(80,0,0)
+    --purple :rgb(256,256,256)
 }
 body{
     margin:0;
     padding:0;
     color: var(--purple);
     font-family:sans-serif;  
-    background-color: rgb(223, 236, 187); 
+    background-color: rgb(37, 39, 42); 
 }
 *{
     box-sizing: border-box;
@@ -27,8 +27,8 @@ h1{
 button{
     border-radius: 25%;
     font-size: 20px;
-    background-color: rgb(223, 110, 65);
-    color:black
+    background-color: rgb(107, 95, 100);
+    color:white
 }
 
 #gameboard{
