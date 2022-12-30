@@ -32,17 +32,17 @@ button{
 }
 
 #gameboard{
-    width:450px;
+    width:360px;
     display: flex;
     flex-wrap: wrap;
     margin-top: 30px;
 }
 .box{
-    height: 150px;
-    width: 150px;
+    height: 120px;
+    width: 120px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 140px;
+    font-size: 112px;
     
 }
